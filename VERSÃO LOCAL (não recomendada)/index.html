@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MentalCraft - Apoio ao Estudante | Saúde Mental & Anti-Bullying</title>
+  <meta name="description" content="Site de apoio ao estudante com temática Minecraft sobre saúde mental e bullying.">
+  <link rel="icon" href="./favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="./favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Tailwind CSS CDN (replaces the build-time @import) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Prevent FOUC: apply stored classes before first paint
+    try {
+      var s = JSON.parse(localStorage.getItem('minecraft-support-app') || '{}');
+      if (s.state) {
+        var st = typeof s.state === 'string' ? JSON.parse(s.state) : s.state;
+        if (st.highContrast) document.documentElement.classList.add('high-contrast');
+        if (st.largeText) document.documentElement.classList.add('large-text');
+      }
+    } catch(e) {}
+  </script>
+</head>
+<body id="mc-body" class="antialiased">
+  <div id="mc-app" class="min-h-screen flex flex-col">
+    <!-- Particles Background -->
+    <div id="mc-particles"></div>
+    <!-- Biome effects -->
+    <div class="mc-torch-left"></div>
+    <div class="mc-torch-right"></div>
+    <!-- Header -->
+    <header id="mc-header"></header>
+    <!-- Main Content -->
+    <main id="mc-main" class="flex-1 relative z-10"></main>
+    <!-- Footer -->
+    <footer id="mc-footer"></footer>
+  </div>
+  <script src="./js/app.bundle.js"></script>
+</body>
+</html>
